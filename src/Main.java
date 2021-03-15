@@ -1,5 +1,3 @@
-package ui;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -41,11 +39,11 @@ public class Main {
 			
 			if(array[k] + array[m] != M) {
 				
-				while(i < j && array[k] + array[m] != M) {
+				while(i <= j && array[k] + array[m] != M) {
 					m = (i+j)/2;
 					
 					if(array[k] + array[m] == M) {
-						if(array[m]-array[k] < miniDifference) {
+						if(array[m]-array[k] < miniDifference && k != m) {
 							miniDifference = array[m]-array[k];
 							a = array[k];
 							b = array[m];							
